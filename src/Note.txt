@@ -6,3 +6,5 @@ CollectionPreview > ItemCollection - render the image, price etc... on each indi
 
 
 Header > {LOGO and nav items}
+
+SignInSignUp > SignIn
