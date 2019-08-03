@@ -1,3 +1,8 @@
 Homepage > Directory
 Directory > MenuItem - map all the category - with title and <Link> to the pages
 ShopContentPage (passing props) > CollectionPreview - List out items of different category
+CollectionPreview > ItemCollection - render the image, price etc... on each individual items in the collection
+
+
+
+Header > {LOGO and nav items}
