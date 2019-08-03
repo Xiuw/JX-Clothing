@@ -1,0 +1,3 @@
+Homepage > Directory
+Directory > MenuItem - map all the category - with title and <Link> to the pages
+ShopContentPage (passing props) > CollectionPreview - List out items of different category
