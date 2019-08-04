@@ -1,13 +1,15 @@
+import { SET_USER } from "./userConstant";
+
 const initialState = {
-  user: null
+  authUser: null
 };
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "SET_USER":
+    case SET_USER:
       return {
         ...state,
-        user: action.payload
+        authUser: action.payload
       };
     default:
       return state;
