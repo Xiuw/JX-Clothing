@@ -5,6 +5,6 @@ CollectionPreview > ItemCollection - render the image, price etc... on each indi
 
 
 
-Header > {LOGO and nav items}
+Header > LOGO and nav items + Shopping Cart and cart dropdown
 
-SignInSignUp > SignIn
+SignInSignUp > SignIn & SignUp
