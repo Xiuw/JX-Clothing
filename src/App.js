@@ -41,7 +41,11 @@ class App extends React.Component {
           <Route
             path="/signin"
             render={() =>
-              this.props.user ? <Redirect to="/" /> : <SignInSignUp />
+              this.props.authUser !== null ? (
+                <Redirect to="/" />
+              ) : (
+                <SignInSignUp />
+              )
             }
           />
         </Switch>
@@ -50,9 +54,9 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  authUser: user.authUser
-});
+const mapStateToProps = state => {
+  return { authUser: state.userReducer.authUser };
+};
 const mapDispatchToProps = dispatch => ({
   setUser: user => dispatch(setUser(user))
 });

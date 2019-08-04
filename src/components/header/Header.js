@@ -34,9 +34,11 @@ const Header = ({ authUser, hidden }) => (
     {hidden ? null : <CartDropdown />}
   </div>
 );
-const mapStateToProps = ({ user: { authUser }, cart: { hidden } }) => ({
+const mapStateToProps = state => {
   // authUser: state.user.authUser
-  authUser,
-  hidden
-});
+  return {
+    authUser: state.userReducer.authUser,
+    hidden: state.cartReducer.hidden
+  };
+};
 export default connect(mapStateToProps)(Header);
