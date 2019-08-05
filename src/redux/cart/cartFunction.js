@@ -16,3 +16,7 @@ export const addingItem = (cartItems, toBeAddItem) => {
   return [...cartItems, { ...toBeAddItem, quantity: 1 }];
   // for item does not exist, return the state, and add toBeAddItem with its quantity with 1ß
 };
+
+export const deleteItem = (cartItems, toBeDeleteItem) => {
+  return cartItems.filter(cartItem => cartItem.id !== toBeDeleteItem.id);
+};
