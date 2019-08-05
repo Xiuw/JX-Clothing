@@ -9,4 +9,9 @@
 5. Toggle shopping bag
 6. Display full list of to be purchase items on checkout page with its total
 
+### Resuable components
+
+- button - <AllButton>
+- input - <InputForm>
+
 ## Available Scripts

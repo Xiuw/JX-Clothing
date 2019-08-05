@@ -16,15 +16,26 @@
       height: 100%;
     }
   }
+  .quantity {
+    display: flex;
+
+    .count {
+      padding: 0;
+      margin: 0px 5px;
+    }
+    .arrow {
+      cursor: pointer;
+    }
+  }
   .name,
   .quantity,
   .price {
     width: 23%;
   }
 
-  .quantity {
-    padding-left: 20px;
-  }
+  //   .quantity {
+  //     padding-left: 20px;
+  //   }
 
   .delete {
     padding-left: 12px;

@@ -1,10 +1,11 @@
 import {
   CART_TOGGLE,
   ADD_ITEM_TO_CART,
-  DELETE_CART_ITEM
+  DELETE_CART_ITEM,
+  REMOVE_A_ITEM
 } from "./cartConstant";
 
-import { addingItem, deleteItem } from "./cartFunction";
+import { addingItem, deletingItem, removingItem } from "./cartFunction";
 
 const initialState = {
   hidden: true,
@@ -23,10 +24,15 @@ const cartReducer = (state = initialState, action) => {
         ...state,
         cartItems: addingItem(state.cartItems, action.payload)
       };
+    case REMOVE_A_ITEM:
+      return {
+        ...state,
+        cartItems: removingItem(state.cartItems, action.payload)
+      };
     case DELETE_CART_ITEM:
       return {
         ...state,
-        cartItems: deleteItem(state.cartItems, action.payload)
+        cartItems: deletingItem(state.cartItems, action.payload)
       };
     default:
       return state;

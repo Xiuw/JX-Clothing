@@ -1,7 +1,8 @@
 import {
   CART_TOGGLE,
   ADD_ITEM_TO_CART,
-  DELETE_CART_ITEM
+  DELETE_CART_ITEM,
+  REMOVE_A_ITEM
 } from "./cartConstant";
 
 export const cartToggle = cart => ({
@@ -15,5 +16,10 @@ export const addItemToCart = item => ({
 
 export const deleteCartItem = item => ({
   type: DELETE_CART_ITEM,
+  payload: item
+});
+
+export const removeAItem = item => ({
+  type: REMOVE_A_ITEM,
   payload: item
 });
