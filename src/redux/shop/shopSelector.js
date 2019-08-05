@@ -7,20 +7,13 @@ export const selectCollection = createSelector(
   item => item.collection
 );
 
-const Map_Category_To_Id = {
-  hats: 1,
-  sneaker: 2,
-  jackets: 3,
-  womens: 4,
-  mens: 5
-};
-
+export const selectForPreview = createSelector(
+  [selectCollection],
+  category => Object.keys(category).map(key => category[key])
+);
 export const selectCategory = categoryParam => {
   return createSelector(
     [selectCollection],
-    category =>
-      category.find(
-        category => category.id === Map_Category_To_Id[categoryParam]
-      )
+    category => category[categoryParam]
   );
 };
