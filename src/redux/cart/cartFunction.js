@@ -21,7 +21,8 @@ export const removingItem = (cartItems, toBeRemoveItem) => {
   );
   if (itemExist.quantity === 1) {
     //if the quantity of an existing item is 1
-    return cartItems.filter(cartItem => cartItem.id === toBeRemoveItem.id); //remove the item from the cartItem
+    return cartItems.filter(cartItem => cartItem.id !== toBeRemoveItem.id);
+    //remove the item from the cartItem
   }
   //if above condition does not meet
   return cartItems.map((
@@ -29,7 +30,7 @@ export const removingItem = (cartItems, toBeRemoveItem) => {
   ) =>
     cartItem.id === toBeRemoveItem.id
       ? { ...cartItem, quantity: cartItem.quantity - 1 }
-      : { cartItem }
+      : cartItem
   );
 };
 
