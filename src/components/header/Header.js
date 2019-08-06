@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ReactComponent as Logo } from "./crown.svg";
+import JXLogo from "./JXLogo.png";
+// import { ReactComponent as Logo } from "./crown.svg";
 import { auth } from "../../firebase/Firebase";
 import { connect } from "react-redux";
 import Cart from "../cart/Cart";
@@ -13,7 +14,7 @@ import "./Header.scss";
 const Header = ({ authUser, hidden }) => (
   <div className="header">
     <Link to="/" className="logo-container">
-      <Logo className="logo" />
+      <img src={JXLogo} className="logo" alt="JX Fashion" />
     </Link>
     <div className="options">
       <Link className="option" to="/shop">
