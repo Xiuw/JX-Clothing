@@ -7,7 +7,7 @@ import ItemCollection from "../../components/item-collection/ItemCollection";
 import "./CategoryCollection.scss";
 
 const CategoryCollection = ({ collection, match }) => {
-  console.log(match);
+  console.log(match.params.categoryId);
   const { title, items } = collection;
   return (
     <div className="category">
@@ -20,7 +20,7 @@ const CategoryCollection = ({ collection, match }) => {
     </div>
   );
 };
-const mapStateToProps = (state, props) => ({
-  collection: selectCategory(props.match.params.categoryId)(state) // can use createStructuredSelctor to prevent passing
+const mapStateToProps = (state, ownProps) => ({
+  collection: selectCategory(ownProps.match.params.categoryId)(state) // can use createStructuredSelctor to prevent passing
 });
 export default connect(mapStateToProps)(CategoryCollection);

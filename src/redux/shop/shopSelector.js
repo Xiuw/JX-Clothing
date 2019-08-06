@@ -11,6 +11,7 @@ export const selectForPreview = createSelector(
   [selectCollection],
   category => Object.keys(category).map(key => category[key])
 );
+
 export const selectCategory = categoryParam => {
   return createSelector(
     [selectCollection],

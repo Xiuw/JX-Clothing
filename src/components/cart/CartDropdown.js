@@ -19,7 +19,7 @@ const CartDropdown = ({ cartItems, history, dispatch }) => (
     </div>
     <AllButton
       onClick={() => {
-        history.push("./checkout");
+        history.push("/checkout");
         dispatch(cartToggle());
       }}
     >

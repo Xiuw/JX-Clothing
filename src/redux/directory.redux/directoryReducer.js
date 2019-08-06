@@ -1,33 +1,38 @@
+import hats from "../../image/hats.jpg";
+import sneakers from "../../image/sneakers.jpg";
+import womens from "../../image/womens.jpg";
+import mens from "../../image/mens.jpg";
+import jackets from "../../image/jackets.jpg";
 const initialState = {
   sections: [
     {
       title: "hats",
-      imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
+      imageUrl: hats,
       id: 1,
       urlLink: "shop/hats"
     },
     {
       title: "jackets",
-      imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
+      imageUrl: jackets,
       id: 2,
       urlLink: "shop/jackets"
     },
     {
       title: "sneakers",
-      imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
+      imageUrl: sneakers,
       id: 3,
       urlLink: "shop/sneakers"
     },
     {
       title: "womens",
-      imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
+      imageUrl: womens,
       size: "large",
       id: 4,
       urlLink: "shop/womens"
     },
     {
       title: "mens",
-      imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
+      imageUrl: mens,
       size: "large",
       id: 5,
       urlLink: "shop/mens"
