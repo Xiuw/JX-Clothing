@@ -1,11 +1,13 @@
-import ITEM_DATA from "./item.data";
+import { GET_COLLECTIONS } from "./shopConstant";
 
 const initialState = {
-  collection: ITEM_DATA
+  collection: null
 };
 
 const shopReducer = (state = initialState, action) => {
   switch (action.type) {
+    case GET_COLLECTIONS:
+      return { ...state, collection: action.payload };
     default:
       return state;
   }

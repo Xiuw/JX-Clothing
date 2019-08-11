@@ -9,12 +9,13 @@ export const selectCollection = createSelector(
 
 export const selectForPreview = createSelector(
   [selectCollection],
-  category => Object.keys(category).map(key => category[key])
+  category => (category ? Object.keys(category).map(key => category[key]) : [])
 );
 
 export const selectCategory = categoryParam => {
+  console.log(categoryParam);
   return createSelector(
     [selectCollection],
-    category => category[categoryParam]
+    category => (category ? category[categoryParam] : null)
   );
 };

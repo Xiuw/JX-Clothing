@@ -3,39 +3,48 @@ import sneakers from "../../image/sneakers.jpg";
 import womens from "../../image/womens.jpg";
 import mens from "../../image/mens.jpg";
 import jackets from "../../image/jackets.jpg";
+import beauty from "../../image/beauty.jpg";
+
 const initialState = {
   sections: [
     {
-      title: "hats",
-      imageUrl: hats,
-      id: 1,
-      urlLink: "shop/hats"
-    },
-    {
-      title: "jackets",
-      imageUrl: jackets,
-      id: 2,
-      urlLink: "shop/jackets"
-    },
-    {
-      title: "sneakers",
-      imageUrl: sneakers,
-      id: 3,
-      urlLink: "shop/sneakers"
-    },
-    {
       title: "womens",
       imageUrl: womens,
-      size: "large",
-      id: 4,
+
+      id: 1,
       urlLink: "shop/womens"
     },
     {
       title: "mens",
       imageUrl: mens,
-      size: "large",
-      id: 5,
+
+      id: 2,
       urlLink: "shop/mens"
+    },
+    {
+      title: "hats",
+      imageUrl: hats,
+      id: 3,
+      urlLink: "shop/hats"
+    },
+    {
+      title: "jackets",
+      imageUrl: jackets,
+      id: 4,
+      urlLink: "shop/jackets"
+    },
+
+    {
+      title: "sneakers",
+      imageUrl: sneakers,
+      id: 5,
+      urlLink: "shop/sneakers"
+    },
+    {
+      title: "beauty",
+      imageUrl: beauty,
+      id: 6,
+      urlLink: "shop/beauty"
     }
   ]
 };

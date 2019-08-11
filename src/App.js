@@ -12,6 +12,7 @@ import { connect } from "react-redux";
 import { setUser } from "./redux/user/userAction";
 import { createStructuredSelector } from "reselect";
 import { selectAuthUser } from "./redux/user/userSelector";
+// import { selectForPreview } from "./redux/shop/shopSelector";
 
 import "./App.css";
 
@@ -31,6 +32,10 @@ class App extends React.Component {
         });
       }
       setUser(accAuth);
+      // addCollectionAndDocuments(
+      //   "collections",
+      //   collectionItemsArray.map(({ title, items }) => ({ title, items }))
+      // );
     });
   }
   componentWillUnmount() {
@@ -66,6 +71,7 @@ class App extends React.Component {
 
 const mapStateToProps = createStructuredSelector({
   authUser: selectAuthUser
+  // collectionItemsArray: selectForPreview
 });
 const mapDispatchToProps = dispatch => ({
   setUser: user => dispatch(setUser(user))
