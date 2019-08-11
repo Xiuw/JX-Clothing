@@ -3,9 +3,10 @@ import "./AllButton.scss";
 
 const AllButton = ({ children, isGoogleSignIn, inverted, ...otherProps }) => (
   <button
-    className={`${inverted ? "inverted" : ""}${
-      isGoogleSignIn ? "google-sign-in" : ""
-    } all-button`}
+    className={`
+      ${inverted ? "inverted" : ""}
+      ${isGoogleSignIn ? "google-sign-in" : ""} all-button
+      `}
     {...otherProps}
   >
     {children}
