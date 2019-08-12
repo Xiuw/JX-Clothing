@@ -5,8 +5,14 @@ import CategoryCollection from "../category-collection/CategoryCollection";
 import { firestore, convertCollectionsToMap } from "../../firebase/Firebase";
 import { connect } from "react-redux";
 import { getCollections } from "../../redux/shop/shopAction";
+import LoadingSpinner from "../../components/loading-spinner/LoadingSpinner";
 
+const ShopOverviewSpinner = LoadingSpinner(ShopOverview);
+const CategoryCollectionSpinner = LoadingSpinner(CategoryCollection);
 class ShopContentPage extends React.Component {
+  state = {
+    loading: true
+  };
   unsubscribeFromSnapShot = null;
   componentDidMount() {
     const { getCollections } = this.props;
@@ -14,17 +20,27 @@ class ShopContentPage extends React.Component {
     collectionRef.onSnapshot(async snapshot => {
       const collections = convertCollectionsToMap(snapshot);
       getCollections(collections);
+      this.setState({ loading: false });
     });
   }
 
   render() {
     const { match } = this.props;
+    const { loading } = this.state;
     return (
       <div className="shop-content-page">
-        <Route exact path={`${match.path}`} component={ShopOverview} />
+        <Route
+          exact
+          path={`${match.path}`}
+          render={props => (
+            <ShopOverviewSpinner isLoading={loading} {...props} />
+          )}
+        />
         <Route
           path={`${match.path}/:categoryId`}
-          component={CategoryCollection}
+          render={props => (
+            <CategoryCollectionSpinner isLoading={loading} {...props} />
+          )}
         />
       </div>
     );

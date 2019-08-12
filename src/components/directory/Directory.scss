@@ -1,6 +1,8 @@
 .directory-menu {
-   width: 100%;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
- }
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: space-between;
+}

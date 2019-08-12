@@ -1,15 +1,7 @@
 import React from "react";
-import "./AllButton.scss";
+import { AllButtonContainer } from "./AllButton.style.jsx";
 
-const AllButton = ({ children, isGoogleSignIn, inverted, ...otherProps }) => (
-  <button
-    className={`
-      ${inverted ? "inverted" : ""}
-      ${isGoogleSignIn ? "google-sign-in" : ""} all-button
-      `}
-    {...otherProps}
-  >
-    {children}
-  </button>
+const AllButton = ({ children, ...props }) => (
+  <AllButtonContainer {...props}>{children}</AllButtonContainer>
 );
 export default AllButton;

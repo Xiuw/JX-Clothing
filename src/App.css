@@ -1,11 +1,17 @@
-body{
-  font-family:'open Sans Condensed';
-  padding:20px 60px;
+body {
+  font-family: "open Sans Condensed";
+  padding: 20px 60px;
 }
-a{
-  text-decoration:none;
-  color:black;
+a {
+  text-decoration: none;
+  color: black;
 }
-*{
+* {
   box-sizing: border-box;
+}
+@media only screen and (max-width: 450px) {
+  body {
+    margin: 0;
+    padding: 20px 0;
+  }
 }

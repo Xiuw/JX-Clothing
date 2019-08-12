@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 import JXLogo from "./JXLogo.png";
 // import { ReactComponent as Logo } from "./crown.svg";
 import { auth } from "../../firebase/Firebase";
@@ -17,8 +17,6 @@ import {
   OptionLink,
   OptionDiv
 } from "./Header.style.jsx";
-
-import "./Header.scss";
 
 const Header = ({ authUser, hidden }) => (
   <HeaderContainer>
