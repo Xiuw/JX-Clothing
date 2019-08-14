@@ -19,3 +19,13 @@ export const selectCategory = categoryParam => {
     category => (category ? category[categoryParam] : null)
   );
 };
+
+export const selectCollectionPending = createSelector(
+  [selectCollectionItems],
+  item => item.isPending
+);
+
+export const selectIsCollectionLoaded = createSelector(
+  [selectCollectionItems],
+  item => !!item.collection
+);

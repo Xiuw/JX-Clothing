@@ -7,9 +7,13 @@ import "./ShopOverview.scss";
 //overview of different category collection
 const ShopOverview = ({ itemCollection }) => (
   <div className="category">
-    {itemCollection.map(({ id, ...otherCollection }) => (
-      <CollectionPreview key={id} {...otherCollection} />
-    ))}
+    <div>{}</div>
+
+    <div>
+      {itemCollection.map(({ id, ...otherCollection }) => (
+        <CollectionPreview key={id} {...otherCollection} />
+      ))}
+    </div>
   </div>
 );
 const mapStateToProps = createStructuredSelector({
